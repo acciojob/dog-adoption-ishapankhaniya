@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog Adoption – Learn the Breeds</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
+    body { margin: 0; padding: 2rem; background: #fafafa; color: #1f2937; }
+    h1 { margin: 0 0 1rem; font-size: 1.75rem; }
+    p.desc { margin: 0 0 1.25rem; color: #4b5563; }
+
+    /* Gallery list */
+    ul.breed-gallery { list-style: disc inside; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; padding: 0; }
+    ul.breed-gallery > li { list-style: none; }
+
+    /* Card link */
+    .breed-card { display: block; border-radius: 16px; background: white; padding: 0.75rem; box-shadow: 0 8px 20px rgba(0,0,0,0.06); text-decoration: none; color: inherit; height: 100%; transition: transform 0.12s ease, box-shadow 0.12s ease; }
+    .breed-card:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,0.10); }
+
+    .breed-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; display: block; }
+    .breed-card .caption { margin-top: 0.5rem; font-weight: 600; text-align: center; }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h1>Dog Adoption – Explore Breeds</h1>
+  <p class="desc">Click a photo to open the breed's Wikipedia page and learn more.</p>
 
+  <!--
+    Requirements Recap:
+    - Use an unordered list (<ul>)
+    - Each image is inside a list item (<li>)
+    - Each image is linked via an anchor (<a>) to the breed's Wikipedia page
+  -->
+
+  <ul class="breed-gallery">
+    <!-- 1) Golden Retriever -->
+    <li>
+      <a class="breed-card" href="https://en.wikipedia.org/wiki/Golden_Retriever" target="_blank" rel="noopener noreferrer">
+        <!-- Replace the src below with the actual Golden Retriever image link if you have one. -->
+        <img src="Golden Retriever img link" alt="Golden Retriever" />
+        <div class="caption">Golden Retriever</div>
+      </a>
+    </li>
+
+    <!-- 2) Poodle -->
+    <li>
+      <a class="breed-card" href="https://en.wikipedia.org/wiki/Poodle" target="_blank" rel="noopener noreferrer">
+        <!-- Replace the src below with the actual Poodle image link if you have one. -->
+        <img src="Poodle img link" alt="Poodle" />
+        <div class="caption">Poodle</div>
+      </a>
+    </li>
+  </ul>
 </body>
-
 </html>
